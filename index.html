@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+  </head>
+    <style>
+      .container {
+        width: 600px;
+        height: 10px;
+        /* border: 1px dashed blue; */
+        /* padding: 2px; */
+        margin: 80px auto;
+      }
+
+      .wrapper {
+        position: relative;
+        border: 1px dashed red;
+        padding: 10px;
+      }
+
+      .element1 {
+        float: left;
+        width: 80px;
+        height: 80px;
+        background-color: red;
+      }
+
+      .element2 {
+        float: left;
+        width: 80px;
+        height: 80px;
+        background-color: yellow;
+      }
+      .element3 {
+        position: absolute;
+        top: 60px;
+        left: 300px;
+        width: 80px;
+        height: 80px;
+        background-color: green;
+      }
+      .wrapper::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+  </style>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="element1">element1</div>
+        <div class="element2">element2</div>
+        <div class="element3">element3</div>
+      </div>
+    </div>
+  </body>
+</html>
